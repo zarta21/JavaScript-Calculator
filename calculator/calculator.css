@@ -1,0 +1,148 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap'); */
+:root {
+    --background: #A9A9A9;
+    --calculator:  	#DCDCDC;
+    --text: #000;
+    --buttonText: #fff;
+    --buttonNum: #B0B0B0;
+    --buttonOpr:  	#A0A0A0;
+    --buttonAC: var(--buttonText);
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    /* font-family: 'Be Vietnam Pro', sans-serif; */
+    background-color: var(--background);    
+}
+
+#switch {
+    margin-left: 1.5%;
+    margin-top: 2%;
+}
+
+/* .fas  {
+    font-size: 25px;
+    cursor: pointer;
+ } */
+
+ .toggle {
+    font-size: 25px;
+    cursor: pointer;
+ }
+
+.container {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--calculator);
+    color: var(--text);
+    border-radius: 50px;
+    padding: 20px;
+    width: 240px;
+}
+
+.display {
+    font-size: 40px;
+    font-weight: 300;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 16px 32px;
+    text-align: right;
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    box-shadow:  inset 6px 6px 9px  #939393,
+                inset -6px -6px 9px rgba(255, 255, 255, 0.4);
+}
+
+.display1 {
+    opacity: 0.4;
+    font-size: 15px;
+    height: 25px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding-block: 1rem;
+    margin-inline: auto;
+}
+
+.button {
+    align-items: center;
+    background: var(--buttonNum);
+    color: var(--buttonText);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 15px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+    box-shadow:  6px 6px 9px  #939393,
+                -6px -6px 9px rgba(255, 255, 255, 0.4);
+}
+
+.AC, .C {
+    color: black;
+    background: var(--buttonAC);
+}
+
+.operator {
+    background: var(--buttonOpr);
+    color: var(--text);
+}
+
+.button:hover {
+    filter: brightness(130%);
+}
+
+.AC:hover, .C:hover {
+    filter: brightness(75%);
+}
+
+#zero, .AC {
+    border-radius: 55px;
+    grid-column: 1 / span 2;
+    justify-content: center;
+    width: 120px;
+}
+
+.button:active {
+    filter: brightness(100%);
+    box-shadow:  inset 6px 6px 9px  #939393,
+            inset -6px -6px 9px rgba(255, 255, 255, 0.4);
+}
+  
+.dark {
+    --background: #101433;
+    --text: #fff;
+    --calculator: #000;
+    --buttonNum: #333;
+    --buttonOpr:  	#f1a33c;
+    --buttonAC: #a5a5a5;
+    --buttonText: #fff;
+}
+
+.dark .button, .dark .display, .dark .container {
+    box-shadow: none;
+}
+
+.dark .display {
+    padding: 15px;
+}
+
+.dark .AC:hover, .dark .C:hover {
+    filter: brightness(130%);
+}
+
+.dark > * {
+    color:rgb(255, 255, 255);
+} 
+  
