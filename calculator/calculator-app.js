@@ -4,7 +4,6 @@ let darkMode = localStorage.getItem("darkMode");
 const switchMode = document.querySelector("#switch");
 const btn = document.querySelector(".toggle");
 
-// Dark Mode Functions:
 darkModeOn = () => {
     document.body.classList.add("dark");
     localStorage.setItem("darkMode", "on");
@@ -32,8 +31,6 @@ switchMode.addEventListener("click", () => {
 });
 
 
-
-// Calculator Variables:
 const display1 = document.querySelector(".display1");
 const display2 = document.querySelector(".display2");
 const numbers = document.querySelectorAll(".number");
